@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finanzanas - Negocios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../assets/img/Y.png" alt="Finanzanas Logo" class="me-2">
+                Finanzanas
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html"><i class="fas fa-home me-1"></i>Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calculadora.html"><i class="fas fa-calculator me-1"></i>Calculadora</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="negocios.html"><i class="fas fa-briefcase me-1"></i>Negocios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consejos.html"><i class="fas fa-lightbulb me-1"></i>Consejos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html"><i class="fas fa-concierge-bell me-1"></i>Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html"><i class="fas fa-address-book me-1"></i>Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registro.html"><i class="fas fa-user-plus me-1"></i>Registro</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-5 pt-5">
+        <h2 class="text-center mb-4 text-white"><i class="fas fa-briefcase me-2"></i>Calculadora para Negocios</h2>
+        <p class="text-center mb-5 text-white">Analiza la rentabilidad de tu negocio de manera simple y efectiva. Ingresa tus ingresos y gastos para obtener un análisis financiero básico.</p>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card p-4 mb-4">
+                    <h5 class="card-title mb-3" style="color: #00ff00 !important;"><i class="fas fa-chart-bar me-2"></i>Datos de tu Negocio</h5>
+                    <div class="mb-3">
+                        <label for="ingresosTotales" class="form-label">Ingresos Totales (COP)</label>
+                        <input type="number" class="form-control" id="ingresosTotales" placeholder="Ejemplo: 5000000">
+                        <small class="form-text text-muted">Ingresa todos los ingresos de tu negocio del período</small>
+                    </div>
+                    <div class="mb-4">
+                        <label for="gastosTotales" class="form-label">Gastos Totales (COP)</label>
+                        <input type="number" class="form-control" id="gastosTotales" placeholder="Ejemplo: 3000000">
+                        <small class="form-text text-muted">Incluye todos los gastos operativos, salarios, servicios, etc.</small>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-secondary" onclick="clearBusinessForm()"><i class="fas fa-eraser me-2"></i>Limpiar</button>
+                        <button class="btn btn-primary" onclick="analyzeBusiness()"><i class="fas fa-chart-line me-2"></i>Analizar</button>
+                    </div>
+                </div>
+
+                <div class="card p-4 mb-4">
+                    <h5 class="card-title mb-3" style="color: #00ff00 !important;"><i class="fas fa-receipt me-2"></i>Resumen Financiero</h5>
+                    <div class="row text-center mb-3">
+                        <div class="col">
+                            <div class="bg-success-subtle p-3 rounded text-success">
+                                <p class="mb-0 fw-bold">Ingresos</p>
+                                <h4 id="displayIngresos">$0</h4>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="bg-danger-subtle p-3 rounded text-danger">
+                                <p class="mb-0 fw-bold">Gastos</p>
+                                <h4 id="displayGastos">$0</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center bg-primary-subtle p-3 rounded text-primary">
+                        <p class="mb-0 fw-bold">Ganancia/Pérdida</p>
+                        <h3 id="displayGanancia">$0</h3>
+                        <p class="mb-0"><small>Margen: <span id="displayMargen">0.0</span>%</small></p>
+                    </div>
+                </div>
+
+                <div class="card p-4 mb-4">
+                    <h5 class="card-title mb-3" style="color: #00ff00 !important;"><i class="fas fa-lightbulb me-2"></i>Optimiza tus Ingresos</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle me-2 text-success"></i>Diversifica tus fuentes de ingresos</li>
+                        <li><i class="fas fa-check-circle me-2 text-success"></i>Mejora la calidad de tu producto/servicio</li>
+                        <li><i class="fas fa-check-circle me-2 text-success"></i>Implementa estrategias de marketing</li>
+                        <li><i class="fas fa-check-circle me-2 text-success"></i>Ajusta precios según el mercado</li>
+                    </ul>
+                </div>
+
+                <div class="card p-4 mb-4">
+                    <h5 class="card-title mb-3" style="color: #00ff00 !important;"><i class="fas fa-minus-circle me-2"></i>Reduce tus Gastos</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle me-2 text-success"></i>Revisa gastos innecesarios mensualmente</li>
+                        <li><i class="fas fa-check-circle me-2 text-success"></i>Negocia mejores precios con proveedores</li>
+                        <li><i class="fas fa-check-circle me-2 text-success"></i>Automatiza procesos para ahorrar tiempo</li>
+                        <li><i class="fas fa-check-circle me-2 text-success"></i>Considera opciones de trabajo remoto</li>
+                    </ul>
+                </div>
+
+                <div class="card p-4 mb-4">
+                    <h5 class="card-title mb-3" style="color: #00ff00 !important;"><i class="fas fa-arrow-alt-circle-up me-2"></i>Mejora tu Rentabilidad</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle me-2 text-success"></i>Mantén un margen de ganancia del 20%+</li>
+                        <li><i class="fas fa-check-circle me-2 text-success"></i>Reinvierte las ganancias en crecimiento</li>
+                        <li><i class="fas fa-check-circle me-2 text-success"></i>Crea un fondo de emergencia</li>
+                        <li><i class="fas fa-check-circle me-2 text-success"></i>Planifica estratégicamente a largo plazo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p>&copy; 2025 Finanzanas. Todos los derechos reservados.</p>
+            <p>Mejora tus finanzas personales con nuestras herramientas.</p>
+            <div>
+                <a href="contacto.html" class="text-success me-3">Contacto</a>
+                <a href="servicios.html" class="text-success me-3">Servicios</a>
+                <a href="consejos.html" class="text-success">Consejos</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/negocios.js"></script>
+</body>
+</html>

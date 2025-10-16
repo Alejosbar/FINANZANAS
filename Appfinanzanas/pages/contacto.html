@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finanzanas - Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../assets/img/Y.png" alt="Finanzanas Logo" class="me-2">
+                Finanzanas
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html"><i class="fas fa-home me-1"></i>Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calculadora.html"><i class="fas fa-calculator me-1"></i>Calculadora</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="negocios.html"><i class="fas fa-briefcase me-1"></i>Negocios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consejos.html"><i class="fas fa-lightbulb me-1"></i>Consejos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html"><i class="fas fa-concierge-bell me-1"></i>Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contacto.html"><i class="fas fa-address-book me-1"></i>Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registro.html"><i class="fas fa-user-plus me-1"></i>Registro</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mt-5 pt-5">
+        <h2 class="text-center mb-4 text-white" style="color: #00ff00 !important;"><i class="fas fa-address-book me-2"></i>Contáctanos</h2>
+        <p class="text-center mb-5 text-white">Estamos aquí para ayudarte. No dudes en contactarnos para cualquier consulta o soporte.</p>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- Información de Contacto -->
+                <div class="card p-4 mb-4">
+                    <h4 class="card-title mb-3 text-pink" style="color: #00ff00 !important;"><i class="fas fa-info-circle me-2"></i>Información de Contacto</h4>
+                    <p class="card-text mb-3">Múltiples formas de comunicarte con nosotros.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-envelope me-2 text-primary"></i><strong>Email:</strong> <a href="mailto:finanzanas1@gmail.com" class="text-white-50">finanzanas1@gmail.com</a><br><small class="text-muted">Escríbenos en cualquier momento</small></li>
+                        <li class="mb-2"><i class="fas fa-phone me-2 text-primary"></i><strong>Teléfono:</strong> +573215647898<br><small class="text-muted">Lunes a Viernes, 9am - 6pm</small></li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i><strong>Ubicación:</strong> Colombia, Bogotá<br><small class="text-muted">Oficinas centrales</small></li>
+                    </ul>
+                </div>
+
+                <!-- Envíanos un Mensaje -->
+                <div class="card p-4 mb-4">
+                     <h4 class="card-title mb-3 text-pink" style="color: #00ff00 !important;"><i class="fas fa-paper-plane me-2"></i>Envíanos un Mensaje</h4>
+                    <p class="card-text mb-3">Completa el formulario y te responderemos en menos de 24 horas</p>
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombreCompleto" class="form-label">Nombre completo *</label>
+                            <input type="text" class="form-control" id="nombreCompleto" placeholder="Tu nombre completo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailContacto" class="form-label">Email *</label>
+                            <input type="email" class="form-control" id="emailContacto" placeholder="tu@email.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="asunto" class="form-label">Asunto</label>
+                            <input type="text" class="form-control" id="asunto" placeholder="¿En qué podemos ayudarte?">
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje *</label>
+                            <textarea class="form-control" id="mensaje" rows="5" placeholder="Describe tu consulta, sugerencia o problema..." required></textarea>
+                        </div>
+                        <p class="text-muted">* Campos obligatorios. Responderemos en un plazo máximo de 24 horas.</p>
+                        <button type="submit" class="btn btn-primary w-100"><i class="fas fa-paper-plane me-2"></i>Enviar Mensaje</button>
+                    </form>
+                </div>
+
+                <!-- Preguntas Frecuentes -->
+                <div class="card p-4 mb-4">
+                    <h4 class="card-title mb-3 text-pink" style="color: #00ff00 !important;"><i class="fas fa-question me-2"></i>Preguntas Frecuentes</h4>
+                    <div class="accordion accordion-flush" id="faqAccordion">
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                    ¿Es gratuito usar Finanzanas?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Las funciones básicas son completamente gratuitas. Ofrecemos planes premium para funciones avanzadas.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    ¿Mis datos están seguros?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Utilizamos encriptación de nivel bancario para proteger toda tu información.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-dark text-white">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                    ¿Cómo puedo restablecer mi contraseña?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Puedes restablecer tu contraseña haciendo clic en "Olvidé mi contraseña" en la página de inicio de sesión.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p>&copy; 2025 Finanzanas. Todos los derechos reservados.</p>
+            <p>Mejora tus finanzas personales con nuestras herramientas.</p>
+            <div>
+                <a href="contacto.html" class="text-success me-3">Contacto</a>
+                <a href="servicios.html" class="text-success me-3">Servicios</a>
+                <a href="consejos.html" class="text-success">Consejos</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
