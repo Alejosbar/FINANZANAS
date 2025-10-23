@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación Canvas - Landing Page</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#intro">Canvas Presentation</a>
+            <div class="d-flex">
+                <button id="prevBtn" class="btn btn-outline-light me-2">Anterior</button>
+                <button id="nextBtn" class="btn btn-light">Siguiente</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Progress Bar -->
+    <div id="progressContainer" class="progress-container">
+        <div id="progressBar" class="progress-bar-custom"></div>
+    </div>
+
+    <!-- Sections -->
+    <section id="intro" class="section">
+        <div class="container h-100 d-flex align-items-center">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="display-4">Bienvenido a Finanzanas</h2>
+                    <p class="lead">Nuestra aplicacion trata sobre como ayudar a mejorar tu economia te ayudaremos a que tenga un buen orden en tus gastos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="propuesta-valor" class="section">
+        <div class="container h-100 d-flex align-items-center">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Propuesta de Valor</h2>
+                    <p>Organización financiera personalizada y sencilla.
+Ayuda a controlar el salario, planificar gastos y fomentar el ahorro.
+App gratuita con funciones básicas y versión premium con herramientas avanzadas.
+Promueve hábitos financieros saludables y estabilidad económica.
+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="relaciones-clientes" class="section">
+        <div class="container h-100 d-flex align-items-center">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Relaciones con Clientes</h2>
+                    <p>Relación cercana, práctica y motivadora.
+Comunicación a través de la app y redes sociales.
+Integración con la propuesta de valor para generar confianza.
+Costos de soporte, atención al cliente y gestión de comunidad.
+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="segmentos-cliente" class="section">
+        <div class="container h-100 d-flex align-items-center">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Segmentos de Cliente</h2>
+                    <p>Jóvenes y adultos que buscan organizar su dinero.
+Personas con ingresos fijos 
+Estudiantes universitarios.
+Adultos jóvenes interesados en el ahorro e inversión.
+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="canales" class="section">
+        <div class="container h-100 d-flex align-items-center">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Canales</h2>
+                    <p>Aplicación móvil, redes sociales y correo electrónico.
+Tiendas digitales (App Store, Google Play).
+Redes sociales para fidelización.
+Marketing de contenido de bajo costo.
+Notificaciones inteligentes dentro de la app.
+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="actividades-clave" class="section">
+        <div class="container h-100 d-flex align-items-center">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Actividades Clave</h2>
+                    <p>Desarrollo y mantenimiento de la app.
+Creación de contenido financiero actualizado.
+Diseño de interfaz fácil e intuitiva.
+Marketing digital y difusión.
+Atención y soporte al usuario.
+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="socios-clave" class="section">
+        <div class="container h-100 d-flex align-items-center">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Socios Clave</h2>
+                    <p>Desarrolladores de software y diseñadores UI/UX.
+Expertos en finanzas personales (para contenido de consejos).
+Plataformas de pago (para versiones premium o donaciones).
+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recursos-clave" class="section">
+        <div class="container h-100 d-flex align-items-center">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Recursos Clave</h2>
+                    <p>Plataforma tecnológica robusta.
+Bases de datos seguras.
+Contenido educativo confiable.
+Infraestructura digital para distribución.
+Recursos humanos en marketing, soporte y comunicación.
+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="estructura-costes" class="section">
+        <div class="container h-100 d-flex align-items-center">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Estructura de Costes</h2>
+                    <p>Desarrollo de la app y servidores.
+Marketing digital.
+Creación de contenido financiero.
+Seguridad y mantenimiento.
+Programación y diseño de interfaz.
+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fuentes-ingreso" class="section">
+        <div class="container h-100 d-flex align-items-center">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Fuentes de Ingreso</h2>
+                    <p>Suscripciones premium (mensuales o anuales).
+Publicidad moderada dentro de la app.
+Colaboraciones con instituciones financieras.
+Cursos o guías de educación financiera.
+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="section">
+        <div class="container h-100 d-flex flex-column justify-content-center">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center">
+                    <h2>Aplicacion</h2>
+                    <p>¿Estas interesado? has click para más información.</p>
+                    <a href="Appfinanzanas/index.html" class="btn btn-primary">Finanzanas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

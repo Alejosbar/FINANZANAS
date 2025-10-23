@@ -1,0 +1,137 @@
+/* Global Styles */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --light-bg: #f8f9fa;
+    --dark-bg: #343a40;
+    --text-light: #ffffff;
+    --text-dark: #212529;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Progress Bar */
+.progress-container {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--light-bg);
+    z-index: 1000;
+}
+
+.progress-bar-custom {
+    height: 100%;
+    background: var(--primary-color);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* Sections */
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Alternating Backgrounds */
+#intro {
+    background: linear-gradient(135deg, rgba(0,123,255,0.7), rgba(0,86,179,0.7)), url('senatic2.jpg');    background-repeat: no-repeat;
+
+    background-size: cover;
+    background-position: center;
+    color: var(--text-light);
+}
+
+#propuesta-valor,
+#segmentos-cliente,
+#actividades-clave,
+#recursos-clave,
+#fuentes-ingreso {
+    background: linear-gradient(rgba(248, 249, 250, 0.9), rgba(248, 249, 250, 0.9)), url('senatic2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efecto parallax */
+    color: var(--text-dark);
+}
+
+#relaciones-clientes,
+#canales,
+#socios-clave,
+#estructura-costes,
+#contacto {
+    background: linear-gradient(rgba(52, 58, 64, 0.9), rgba(52, 58, 64, 0.9)), url('senatic2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efecto parallax */
+    color: var(--text-light);
+}
+
+/* Typography */
+h1, h2 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.lead {
+    font-size: 1.9rem;
+    font-weight: 300;
+}
+
+p {
+    font-size: 1.9rem; 
+    line-height: 1.9; 
+}
+
+/* Buttons */
+.btn {
+    border-radius: 50px;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    .lead {
+        font-size: 2.2rem; /* Tamaño duplicado del original 1.1rem */
+    }
+}
